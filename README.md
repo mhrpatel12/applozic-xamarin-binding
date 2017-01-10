@@ -3,17 +3,17 @@ Applozic chat native framework xamarin binding and sample app
 
  **ApplozicXamarinWrapper**
 
-This is C# binding library which should be user as reference to main project.
+This is C# binding library project for Applozic chat framework. This should be use as a native reference project in your main project.
 
  **XamarinApplozicDemo**
 
-This is Applozic samaple project using ApplozicXamarinWrapper as reference project.
+This is Applozic sample project using ApplozicXamarinWrapper as reference project.
 
 # Applozic SDK Integration Steps:
 
 ####STEP 1: Add Applozic binding project to your main project:
 
-1. Add ApplozicXamarinWrapper binding ptoject to your solution.
+1. Add ApplozicXamarinWrapper binding project to your solution.
 
  Your Solution --> Add --> Add Exisitng Project
  
@@ -23,10 +23,10 @@ This is Applozic samaple project using ApplozicXamarinWrapper as reference proje
 
 Add Helper class [ALChatManager.cs](https://raw.githubusercontent.com/AppLozic/applozic-xamarin-ios-chat/master/XamarinApplozicDemo/XamarinApplozicDemo/ALChatManager.cs) in your main project. 
 
-After adding helper class, replace *applozic-samplep-app* with your applicationId. If you haven't registretd yet with Applozic, [register here](https://www.applozic.com/signup.html). 
+After adding helper class, replace *applozic-samplep-app* with your applicationId. If you haven't registered yet with Applozic, [register here](https://www.applozic.com/signup.html). 
 
 ```
- static public String application_id = "<YOUR APPLOZIC APPLICATION ID>";
+static public String application_id = "<YOUR APPLOZIC APPLICATION ID>";
 ```
 
 ####STEP 3: Login/Register User:
@@ -70,7 +70,7 @@ userClientService.InitWithCompletion(user, (ALRegistrationResponse response, NSE
 
 ####STEP 4: Launch chat:
 
-Use ALChatManager methods to launch ddifferent type of chats:
+Use ALChatManager methods to launch different type of chats:
 
 i) Chat/Conversation List:
 
