@@ -149,7 +149,7 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 	}
 ```
 
-iv) Add forground and background notificaton posting.
+iv) Add foreground and background notificaton posting.
 
 ```
 public override void DidEnterBackground(UIApplication application)
