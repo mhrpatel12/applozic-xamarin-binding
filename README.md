@@ -149,3 +149,17 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 	}
 ```
 
+iv) Add forground and background notificaton posting.
+
+```
+public override void DidEnterBackground(UIApplication application)
+{
+    NSNotificationCenter.DefaultCenter.PostNotificationName(@"APP_ENTER_IN_BACKGROUND", null);
+}
+
+public override void WillEnterForeground(UIApplication application)
+{
+    NSNotificationCenter.DefaultCenter.PostNotificationName(@"APP_ENTER_IN_FOREGROUND", null);
+}
+```
+
