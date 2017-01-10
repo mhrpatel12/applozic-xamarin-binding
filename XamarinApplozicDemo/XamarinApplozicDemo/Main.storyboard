@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="26">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController" storyboardIdentifier="MainViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                                <rect key="frame" x="184" y="171" width="233" height="64"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <state key="normal" title="Launch Chat List">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ChatListBtn_TouchUpInside:" destination="BYZ-38-t0r" id="239" eventType="touchUpInside"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="66" y="314" width="282" height="64"/>
+                                    <mask key="constraints">
+                                        <include reference="325"/>
+                                        <include reference="326"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="325" firstAttribute="width" constant="282"/>
+                                    <constraint id="326" firstAttribute="height" constant="64"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="325"/>
+                                        <exclude reference="326"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                                <rect key="frame" x="184" y="291" width="233" height="64"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <state key="normal" title="Launch One-One chat">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OneToOneChatBtn_TouchUpInside:" destination="BYZ-38-t0r" id="238" eventType="touchUpInside"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="66" y="210" width="282" height="64"/>
+                                    <mask key="constraints">
+                                        <include reference="319"/>
+                                        <include reference="320"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="319" firstAttribute="width" constant="282"/>
+                                    <constraint id="320" firstAttribute="height" constant="64"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="319"/>
+                                        <exclude reference="320"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="200">
+                                <rect key="frame" x="184" y="171" width="233" height="64"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <connections>
+                                    <action selector="UIButton3_TouchUpInside:" destination="204" eventType="touchUpInside" id="203"/>
+                                    <action selector="LaunchContextB_TouchUpInside:" destination="BYZ-38-t0r" id="240" eventType="touchUpInside"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="66" y="419" width="282" height="63"/>
+                                    <mask key="constraints">
+                                        <include reference="351"/>
+                                        <include reference="352"/>
+                                    </mask>
+                                </variation>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Launch Context Chat">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <constraints>
+                                    <constraint id="351" firstAttribute="width" constant="282"/>
+                                    <constraint id="352" firstAttribute="height" constant="63"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="351"/>
+                                        <exclude reference="352"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="208">
+                                <rect key="frame" x="184" y="291" width="233" height="64"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton8_TouchUpInside:" destination="212" eventType="touchUpInside" id="211"/>
+                                    <action selector="Logout_TouchUpInside:" destination="BYZ-38-t0r" id="241" eventType="touchUpInside"/>
+                                </connections>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="265" y="61" width="129" height="43"/>
+                                    <mask key="constraints">
+                                        <include reference="305"/>
+                                        <include reference="306"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="305" firstAttribute="width" constant="129"/>
+                                    <constraint id="306" firstAttribute="height" constant="43"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="305"/>
+                                        <exclude reference="306"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" id="357" translatesAutoresizingMaskIntoConstraints="NO" text="Unread Count: ">
+                                <rect key="frame" x="20" y="44" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="20" y="56" width="158" height="48"/>
+                                    <mask key="constraints">
+                                        <include reference="360"/>
+                                        <include reference="361"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="360" firstAttribute="width" constant="158"/>
+                                    <constraint id="361" firstAttribute="height" constant="48"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="360"/>
+                                        <exclude reference="361"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="303" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="208" secondAttribute="trailing" constant="20"/>
+                            <constraint id="304" firstItem="208" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="61"/>
+                            <constraint id="317" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="66"/>
+                            <constraint id="318" firstItem="8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="210"/>
+                            <constraint id="347" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="66"/>
+                            <constraint id="348" firstItem="3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="314"/>
+                            <constraint id="349" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="200" secondAttribute="trailing" constant="66"/>
+                            <constraint id="350" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="200" secondAttribute="centerY" constant="254">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-100"/>
+                            </constraint>
+                            <constraint id="358" firstItem="357" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="359" firstItem="357" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="56"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="286"/>
+                                <exclude reference="287"/>
+                                <exclude reference="303"/>
+                                <exclude reference="304"/>
+                                <exclude reference="317"/>
+                                <exclude reference="318"/>
+                                <exclude reference="347"/>
+                                <exclude reference="348"/>
+                                <exclude reference="349"/>
+                                <exclude reference="350"/>
+                                <exclude reference="358"/>
+                                <exclude reference="359"/>
+                            </mask>
+                            <mask key="subviews">
+                                <exclude reference="200"/>
+                                <exclude reference="208"/>
+                                <exclude reference="357"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="286"/>
+                                <include reference="287"/>
+                                <include reference="303"/>
+                                <include reference="304"/>
+                                <include reference="317"/>
+                                <include reference="318"/>
+                                <include reference="347"/>
+                                <include reference="348"/>
+                                <include reference="349"/>
+                                <include reference="350"/>
+                                <include reference="358"/>
+                                <include reference="359"/>
+                            </mask>
+                            <mask key="subviews">
+                                <include reference="200"/>
+                                <include reference="208"/>
+                                <include reference="357"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="LaunchContextB" destination="200" id="name-outlet-200"/>
+                        <outlet property="Logout" destination="208" id="name-outlet-208"/>
+                        <outlet property="OneToOneChatBtn" destination="8" id="name-outlet-8"/>
+                        <outlet property="ChatListBtn" destination="3" id="name-outlet-3"/>
+                        <outlet property="UreadCount" destination="357" id="name-outlet-357"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="25">
+            <objects>
+                <viewController id="26" customClass="LoginViewController" sceneMemberID="viewController" storyboardIdentifier="LoginViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="23"/>
+                        <viewControllerLayoutGuide type="bottom" id="24"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="27">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="187" y="328" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                                <rect key="frame" x="165" y="383" width="233" height="47"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <state key="normal" title="Login/Sign up">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginButton_TouchUpInside:" destination="26" id="49" eventType="touchUpInside"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="80" firstAttribute="width" constant="233"/>
+                                    <constraint id="81" firstAttribute="height" constant="47"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="80" y="396" width="233" height="47"/>
+                                </variation>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41" placeholder="user id">
+                                <rect key="frame" x="199" y="148" width="223" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <constraints>
+                                    <constraint id="109" firstAttribute="width" constant="223"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="85" y="181" width="223" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42" placeholder="password">
+                                <rect key="frame" x="199" y="247" width="233" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <constraints>
+                                    <constraint id="112" firstAttribute="width" constant="233"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="80" y="284" width="233" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="136" firstItem="32" firstAttribute="leading" secondItem="27" secondAttribute="leading" constant="187"/>
+                            <constraint id="137" firstItem="32" firstAttribute="top" secondItem="27" secondAttribute="top" constant="328"/>
+                            <constraint id="153" firstItem="41" firstAttribute="leading" secondItem="27" secondAttribute="leading" constant="85"/>
+                            <constraint id="154" firstItem="41" firstAttribute="top" secondItem="27" secondAttribute="top" constant="181"/>
+                            <constraint id="158" firstItem="42" firstAttribute="centerX" secondItem="32" secondAttribute="centerX"/>
+                            <constraint id="159" firstItem="42" firstAttribute="centerX" secondItem="41" secondAttribute="centerX"/>
+                            <constraint id="160" firstItem="42" firstAttribute="top" secondItem="27" secondAttribute="top" constant="284"/>
+                            <constraint id="161" firstItem="40" firstAttribute="centerX" secondItem="32" secondAttribute="centerX"/>
+                            <constraint id="162" firstItem="40" firstAttribute="centerX" secondItem="42" secondAttribute="centerX"/>
+                            <constraint id="163" firstItem="27" firstAttribute="bottom" secondItem="40" secondAttribute="bottom" constant="293"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="136"/>
+                                <exclude reference="137"/>
+                                <exclude reference="153"/>
+                                <exclude reference="154"/>
+                                <exclude reference="158"/>
+                                <exclude reference="159"/>
+                                <exclude reference="160"/>
+                                <exclude reference="161"/>
+                                <exclude reference="162"/>
+                                <exclude reference="163"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="136"/>
+                                <include reference="137"/>
+                                <include reference="153"/>
+                                <include reference="154"/>
+                                <include reference="158"/>
+                                <include reference="159"/>
+                                <include reference="160"/>
+                                <include reference="161"/>
+                                <include reference="162"/>
+                                <include reference="163"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="40" id="name-outlet-40"/>
+                        <outlet property="passwordTextField" destination="42" id="name-outlet-42"/>
+                        <outlet property="userIdTextField" destination="41" id="name-outlet-41"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786" y="-7"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
+</document>

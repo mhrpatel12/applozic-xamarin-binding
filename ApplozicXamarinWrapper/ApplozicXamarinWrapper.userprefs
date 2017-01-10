@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApplozicXamarinWrapper/obj/Debug/ios/ApplozicXamarinWrapper/ALChatLauncherDelegate.g.cs">
+    <Files>
+      <File FileName="ApplozicXamarinWrapper/ApiDefinition.cs" Line="688" Column="4" />
+      <File FileName="ApplozicXamarinWrapper/Structs.cs" Line="66" Column="2" />
+      <File FileName="ApplozicXamarinWrapper/obj/Debug/ios/ApplozicXamarinWrapper/ALChatLauncherDelegate.g.cs" Line="94" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
