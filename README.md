@@ -3,7 +3,7 @@ Applozic chat native framework xamarin binding and sample app
 
  **ApplozicXamarinWrapper**
 
-This is C# binding library project for Applozic chat framework. This should be use as a native reference project in your main project.
+This is C# binding library project for Applozic chat framework. This should be used as a native reference project in your main project.
 
  **XamarinApplozicDemo**
 
@@ -43,7 +43,7 @@ ALUserDefaultsHandler.SetUserAuthenticationTypeId( (short)AuthenticationType.App
 
 ```
 
-ii ) Use below code to register user with applozic: 
+ii ) Code to register user with applozic: 
 		
 ```
  //Applozic user registartion code.
