@@ -43,7 +43,7 @@ ALUserDefaultsHandler.SetUserAuthenticationTypeId( (short)AuthenticationType.App
 
 ```
 
-ii ) Code to register user with applozic: 
+ii ) Code to register user with Applozic: 
 		
 ```
  //Applozic user registartion code.
