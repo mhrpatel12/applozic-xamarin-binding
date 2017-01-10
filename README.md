@@ -89,6 +89,63 @@ ii) One to One chat:
 iii) Launch Context based chat for user:
 
 ```
-	ALChatManager.launchContextBasedChat(ALConversation, this);
+ALChatManager.launchContextBasedChat(<ALConversation-Proxy Object>, <UI CONTROLLER REFERENCE>));
+
 ```
 NOTE: You can find more detail on context based chat [here](https://www.applozic.com/docs/ios-chat-sdk.html#contextual-conversation).
+
+####STEP 5: Push Notification Setup:
+
+i) Add below to *FinishedLaunching(UIApplication application, NSDictionary launchOptions)* method.
+
+```
+//ASK for remote notification registartion.
+ALChatManager.registerNotification();
+ALAppLocalNotifications localNotification = ALAppLocalNotifications.AppLocalNotificationHandler;
+localNotification.DataConnectionNotificationHandler();
+
+if (launchOptions != null)
+{
+
+  	NSDictionary dictionary =  (Foundation.NSDictionary)launchOptions.ObjectForKey(UIApplication.LaunchOptionsRemoteNotificationKey);
+	if (dictionary != null)
+ 	{
+  		Console.WriteLine(@"Launched from push notification: {0} ", dictionary);
+  		ALPushNotificationService pushNotificationService = new ALPushNotificationService();
+  		Boolean applozicProcessed = pushNotificationService.ProcessPushNotification(dictionary, 0);
+  		if (!applozicProcessed)
+  		{
+        		//Note: notification for app
+  		}
+ 	}
+}
+```
+
+ii) To send push notification-token to applozic server, add below code in *RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)*
+
+```
+ ALRegisterUserClientService registerUserClientService = new ALRegisterUserClientService();
+ registerUserClientService.UpdateApnDeviceTokenWithCompletion(DeviceToken, (rResponse, error) =>
+ {
+   if (error != null)
+   {
+       Console.WriteLine("REGISTRATION ERROR :: {0}", error.Description);
+       return;
+   }
+   Console.WriteLine("Registration response from server : {0}", rResponse);
+ });
+
+```
+
+iii) To handle incoming notification, add below code in *public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)*
+
+```
+public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+	{
+		Console.WriteLine("RECEIVED_NOTIFICATION_WITH_COMPLETION ::{0} ", userInfo);
+		ALPushNotificationService pushNotificationService = new ALPushNotificationService();
+		pushNotificationService.NotificationArrivedToApplication(application, userInfo);
+		completionHandler(UIBackgroundFetchResult.NewData);
+	}
+```
+
