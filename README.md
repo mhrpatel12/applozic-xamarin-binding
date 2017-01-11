@@ -163,3 +163,12 @@ public override void WillEnterForeground(UIApplication application)
 }
 ```
 
+iv) Set Device APNS type used in ALChatManager.cs
+
+```
+ 
+ //0 - for developemnt build . 1- for distribution build
+ ALUserDefaultsHandler.SetDeviceApnsType(0);
+ 
+```
+####NOTE : Make sure you have uploaded apns certficate for application on our [dashboard](https://dashboard.applozic.com/views/applozic/page/admin/dashboard.jsp). System will pick APNS certificate according to flag set in this step.
