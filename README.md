@@ -23,7 +23,7 @@ This is Applozic sample project using ApplozicXamarinWrapper as reference projec
 
 Add Helper class [ALChatManager.cs](https://raw.githubusercontent.com/AppLozic/applozic-xamarin-ios-chat/master/XamarinApplozicDemo/XamarinApplozicDemo/ALChatManager.cs) in your main project. 
 
-After adding helper class, replace *applozic-samplep-app* with your applicationId. If you haven't registered yet with Applozic, [register here](https://www.applozic.com/signup.html). 
+After adding helper class, replace *applozic-samplep-app* with your applicationId. If you haven't registered yet with Applozic, [register here](https://www.applozic.com/signup.html) for applicationId. 
 
 ```
 static public String application_id = "<YOUR APPLOZIC APPLICATION ID>";
