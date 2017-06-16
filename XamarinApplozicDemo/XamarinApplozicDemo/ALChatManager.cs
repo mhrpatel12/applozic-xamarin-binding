@@ -23,7 +23,9 @@ namespace XamarinApplozicDemo
 
 			if (ALUserDefaultsHandler.IsLoggedIn)
 			{
-				ChatLauncher.LaunchChatList("<Back", fromViewController);
+				//TODO Navigation : launch chat from custom navigation 
+                ChatLauncher.LaunchChatListWithCustomNavigationBar(fromViewController);
+
 			}
 			else
 			{
@@ -251,6 +253,11 @@ namespace XamarinApplozicDemo
 
 			/*********************************************GOOLE API SETTINGS*******************************************************************/
 			ALUserDefaultsHandler.SetGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"); //REPLACE WITH YOUR GOOGLE MAPKEY
+			
+            //TODO Navigation : launch chat from custom navigation 
+			ALApplozicSettings.SetNavigationControllerClassName(new ALChatCustomNavigation().Class.Name);
+            Console.WriteLine("SetNavigationControllerClassName :: " + ALApplozicSettings.CustomNavigationControllerClassName);
+
 
 		}
 
@@ -272,6 +279,20 @@ namespace XamarinApplozicDemo
 				UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
 			}
 		}
+		//TODO Navigation : launch chat from custom navigation 
+		public void LaunchChatListWithCustomNavigationBar(UIViewController viewController)
+		{
+            UIStoryboard Storyboard = UIStoryboard.FromName("Applozic", NSBundle.FromClass(new ALChatLauncher().Class));
+
+		//	ALMessagesViewController chatListView = (ALMessagesViewController*)[storyboard instantiateViewControllerWithIdentifier: @"ALViewController"];
+
+//		        NSString* className = [ALApplozicSettings getCustomNavigationControllerClassName];
+//            if (![className isKindOfClass:[NSString class]]) className = @"UINavigationController";
+    
+//            UINavigationController* navC = [(UINavigationController*)[NSClassFromString(className) alloc] initWithRootViewController: chatListView];
+//		    [viewController presentViewController:navC animated:YES completion:nil];
+    
+    }
 
 	}
 }

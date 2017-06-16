@@ -93,6 +93,17 @@ namespace XamarinApplozicDemo
 			//                         (NSString) "newMessageNotification",null);
 			this.UreadCount.Text = "Unread count : " + ALChatManager.GetUreadCount();
 			notification.AddObserver((NSString) "newMessageNotification",NewMessageHandler);
+            if(this.NavigationController!=null){
+                
+				this.NavigationItem.SetLeftBarButtonItem(
+				   new UIBarButtonItem(UIBarButtonSystemItem.Cancel, (sender, args) =>
+			   {
+                    this.DismissViewController(true, () => { });
+			   })
+			   , false);  
+            }
+          
+
 		}
 
 		public ALConversationProxy createConversation()

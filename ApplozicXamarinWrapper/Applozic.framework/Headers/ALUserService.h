@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ALConstant.h"
 #import "ALMessage.h"
-#import "ALUserDetail.h"
 #import "ALContact.h"
+#import "ALUserDetail.h"
 
 @interface ALUserService : NSObject
 

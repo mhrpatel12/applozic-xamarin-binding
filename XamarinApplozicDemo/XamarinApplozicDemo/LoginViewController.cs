@@ -20,6 +20,7 @@ namespace XamarinApplozicDemo
 
 			//Applozic registartion code.
 			ALRegisterUserClientService userClientService = new ALRegisterUserClientService();
+
 			userClientService.InitWithCompletion(user, (ALRegistrationResponse response, NSError error) =>
 			{
 				if (error == null && response.DeviceKey != null)
