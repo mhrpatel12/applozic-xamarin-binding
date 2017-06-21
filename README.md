@@ -11,7 +11,7 @@ This is Applozic sample project using ApplozicXamarinWrapper as reference projec
 
 # Applozic SDK Integration Steps:
 
-####STEP 1: Add Applozic binding project to your main project:
+#### STEP 1: Add Applozic binding project to your main project:
 
 1. Add ApplozicXamarinWrapper binding project to your solution.
 
@@ -19,7 +19,7 @@ This is Applozic sample project using ApplozicXamarinWrapper as reference projec
  
 2. Go to your Project References and Edit references and add reference to ApplozicXamarinWrapper.
 
-####STEP 2: Helper class and Applozic Application Id:
+#### STEP 2: Helper class and Applozic Application Id:
 
 Add Helper class [ALChatManager.cs](https://raw.githubusercontent.com/AppLozic/applozic-xamarin-ios-chat/master/XamarinApplozicDemo/XamarinApplozicDemo/ALChatManager.cs) in your main project. 
 
@@ -29,7 +29,7 @@ After adding helper class, replace *applozic-samplep-app* with your applicationI
 static public String application_id = "<YOUR APPLOZIC APPLICATION ID>";
 ```
 
-####STEP 3: Login/Register User:
+#### STEP 3: Login/Register User:
 
 i) Build Applozic User:
 
@@ -68,7 +68,7 @@ userClientService.InitWithCompletion(user, (ALRegistrationResponse response, NSE
 	});
 ```
 
-####STEP 4: Launch chat:
+#### STEP 4: Launch chat:
 
 Use ALChatManager methods to launch different type of chats:
 
@@ -94,7 +94,7 @@ ALChatManager.launchContextBasedChat(<ALConversation-Proxy Object>, <UI CONTROLL
 ```
 NOTE: You can find more detail on context based chat [here](https://www.applozic.com/docs/ios-chat-sdk.html#contextual-conversation).
 
-####STEP 5: Push Notification Setup:
+#### STEP 5: Push Notification Setup:
 
 i) Add below to *FinishedLaunching(UIApplication application, NSDictionary launchOptions)* method.
 
@@ -171,4 +171,4 @@ iv) Set Device APNS type used in ALChatManager.cs
  ALUserDefaultsHandler.SetDeviceApnsType(0);
  
 ```
-####NOTE : Make sure you have uploaded apns certficate for application on our [dashboard](https://dashboard.applozic.com/views/applozic/page/admin/dashboard.jsp). System will pick APNS certificate according to flag set in this step.
+#### NOTE : Make sure you have uploaded apns certficate for application on our [dashboard](https://dashboard.applozic.com/views/applozic/page/admin/dashboard.jsp). System will pick APNS certificate according to flag set in this step.
