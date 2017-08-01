@@ -123,6 +123,7 @@
       <DependentUpon>Main_.cs</DependentUpon>
     </Compile>
     <Compile Include="ALChatCustomNavigation.cs" />
+    <Compile Include="ApplozicContactService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ApplozicXamarinWrapper\ApplozicXamarinWrapper\ApplozicXamarinWrapper.csproj">

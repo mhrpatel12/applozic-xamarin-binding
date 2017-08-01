@@ -1,17 +1,31 @@
 ﻿<Properties StartupConfiguration="{A279E1E6-C168-4A05-9A1A-9875B0176D15}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinApplozicDemo/ALChatCustomNavigation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinApplozicDemo/AppDelegate.cs">
     <Files>
-      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="6" Column="1" />
-      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="144" Column="12" />
+      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="65" Column="1" />
+      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="106" Column="81" />
+      <File FileName="XamarinApplozicDemo/ApplozicContactService.cs" Line="17" Column="1" />
+      <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="222" Column="52" />
+      <File FileName="XamarinApplozicDemo/Main.cs" Line="13" Column="2" />
+      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/obj/Debug/ios/ObjCRuntime/Trampolines.g.cs" Line="354" Column="24" />
+      <File FileName="XamarinApplozicDemo/AppDelegate.cs" Line="49" Column="87" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamarinApplozicDemo" expanded="True">
+            <Node name="XamarinApplozicDemo" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="AppDelegate.cs" selected="True" />
+              <Node name="LoginViewController.cs" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/adarsh/Documents/Git/applozic-xamarin-ios-chat/XamarinApplozicDemo/XamarinApplozicDemo/ALChatCustomNavigation.cs" relfile="XamarinApplozicDemo/ALChatCustomNavigation.cs" line="50" column="1" />
-      <Breakpoint file="/Users/adarsh/Documents/Git/applozic-xamarin-ios-chat/XamarinApplozicDemo/XamarinApplozicDemo/ALChatCustomNavigation.cs" relfile="XamarinApplozicDemo/ALChatCustomNavigation.cs" line="57" column="1" />
-      <Breakpoint file="/Users/adarsh/Documents/Git/applozic-xamarin-ios-chat/XamarinApplozicDemo/XamarinApplozicDemo/ALChatCustomNavigation.cs" relfile="XamarinApplozicDemo/ALChatCustomNavigation.cs" line="65" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.XamarinApplozicDemo PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2A3A0379-08BE-4404-A861-8D9F0B2755DD" />

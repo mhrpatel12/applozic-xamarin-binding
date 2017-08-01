@@ -137,17 +137,5 @@ namespace XamarinApplozicDemo
             messaageService.SendMessageWithAttachment(messageObject, jpgFilename, this, 1); 
         }
 
-        public void addContacts(ALContact contacts)
-        {
-            ALContactService ContactService = new ALContactService();
-
-           // ContactService.AddContact(new ALContact(""));
-        }
-
-        public void getContacts()
-        {
-            
-        }
-
     }
 }

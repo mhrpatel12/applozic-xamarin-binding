@@ -114,7 +114,7 @@ namespace XamarinApplozicDemo
 		public static void ALDefaultChatSettings()
 		{
 
-			/********************** Group Settings *********************************************************/
+			/********************** Group Settings **************************************************************************/
 
 			ALApplozicSettings.SetGroupExitOption(true);
 			ALApplozicSettings.SetGroupMemberRemoveOption(true);
@@ -150,10 +150,10 @@ namespace XamarinApplozicDemo
 			ALApplozicSettings.SetCustomMessageFontSize(14);                                    /*  SET CUSTOM MESSAGE FONT SIZE */
 			ALApplozicSettings.SetCustomMessageFont("Helvetica");
 
-			//****************** DATE COLOUR : AT THE BOTTOM OF MESSAGE BUBBLE ******************/
+			//****************** DATE COLOUR : AT THE BOTTOM OF MESSAGE BUBBLE ***********************************************/
 			ALApplozicSettings.SetDateColor(UIColor.FromRGBA(51 / 255f, 51 / 255f, 51 / 255f, 1 / 2f));
 
-			//****************** MESSAGE SEPERATE DATE COLOUR : DATE MESSAGE ******************/
+			//****************** MESSAGE SEPERATE DATE COLOUR : DATE MESSAGE ************************************************/
 			ALApplozicSettings.SetMsgDateColor(UIColor.Black);
 
 			/***************  SEND MESSAGE ABUSE CHECK  ******************/
@@ -219,7 +219,7 @@ namespace XamarinApplozicDemo
 
 			/*********************************************** CONTACT SETTINGS  **********************************************/
 
-			ALApplozicSettings.SetFilterContactsStatus(true);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
+			ALApplozicSettings.SetFilterContactsStatus(false);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
 			ALApplozicSettings.SetOnlineContactLimit(0);                               /*  IF NEEDED ONLINE USERS WITH LIMIT   */
 
 			ALApplozicSettings.SetSubGroupLaunchFlag(false);                             /*  IF NEEDED ONLINE USERS WITH LIMIT   */
@@ -253,8 +253,12 @@ namespace XamarinApplozicDemo
 
 			/*********************************************GOOLE API SETTINGS*******************************************************************/
 			ALUserDefaultsHandler.SetGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"); //REPLACE WITH YOUR GOOGLE MAPKEY
-			
-            //TODO Navigation : launch chat from custom navigation 
+
+            NSNumber type = 1;
+            NSMutableArray typeToFilter = new NSMutableArray();
+            typeToFilter.Add(type);
+            ALApplozicSettings.SetContactTypeToFilter(typeToFilter) ;
+
 			ALApplozicSettings.SetNavigationControllerClassName(new ALChatCustomNavigation().Class.Name);
             Console.WriteLine("SetNavigationControllerClassName :: " + ALApplozicSettings.CustomNavigationControllerClassName);
 
@@ -284,15 +288,8 @@ namespace XamarinApplozicDemo
 		{
             UIStoryboard Storyboard = UIStoryboard.FromName("Applozic", NSBundle.FromClass(new ALChatLauncher().Class));
 
-		//	ALMessagesViewController chatListView = (ALMessagesViewController*)[storyboard instantiateViewControllerWithIdentifier: @"ALViewController"];
+        }
 
-//		        NSString* className = [ALApplozicSettings getCustomNavigationControllerClassName];
-//            if (![className isKindOfClass:[NSString class]]) className = @"UINavigationController";
-    
-//            UINavigationController* navC = [(UINavigationController*)[NSClassFromString(className) alloc] initWithRootViewController: chatListView];
-//		    [viewController presentViewController:navC animated:YES completion:nil];
-    
-    }
 
 	}
 }
