@@ -1,15 +1,5 @@
-# applozic-xamarin-ios-chat
-Applozic chat native framework xamarin binding and sample app
 
- **ApplozicXamarinWrapper**
-
-This is C# binding library project for Applozic chat framework. This should be used as a native reference project in your main project.
-
- **XamarinApplozicDemo**
-
-This is Applozic sample project using ApplozicXamarinWrapper as reference project.
-
-# Applozic SDK Integration Steps:
+## Applozic SDK Integration Steps:
 
 #### STEP 1: Add Applozic binding project to your main project:
 
