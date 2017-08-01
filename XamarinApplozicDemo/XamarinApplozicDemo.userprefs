@@ -1,23 +1,23 @@
 ﻿<Properties StartupConfiguration="{A279E1E6-C168-4A05-9A1A-9875B0176D15}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinApplozicDemo/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs">
     <Files>
       <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="65" Column="1" />
-      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="106" Column="81" />
+      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="83" Column="50" />
       <File FileName="XamarinApplozicDemo/ApplozicContactService.cs" Line="17" Column="1" />
       <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="222" Column="52" />
       <File FileName="XamarinApplozicDemo/Main.cs" Line="13" Column="2" />
       <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/obj/Debug/ios/ObjCRuntime/Trampolines.g.cs" Line="354" Column="24" />
-      <File FileName="XamarinApplozicDemo/AppDelegate.cs" Line="49" Column="87" />
+      <File FileName="XamarinApplozicDemo/AppDelegate.cs" Line="144" Column="15" />
+      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs" Line="514" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="XamarinApplozicDemo" expanded="True">
-            <Node name="XamarinApplozicDemo" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="AppDelegate.cs" selected="True" />
-              <Node name="LoginViewController.cs" expanded="True" />
+            <Node name="ApplozicXamarinWrapper" expanded="True">
+              <Node name="ApiDefinition.cs" selected="True" />
             </Node>
+            <Node name="XamarinApplozicDemo" expanded="True" />
           </Node>
         </State>
       </Pad>

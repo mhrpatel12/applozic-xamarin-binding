@@ -1194,6 +1194,18 @@ namespace ApplozicXamarinWrapper
         [Export("setSubGroupLaunchFlag:")]
         void SetSubGroupLaunchFlag(bool flag);
 
+       // +(void) setBroadcastGroupEnable:(BOOL) flag;
+
+        [Static]
+        [Export("isBroadcastGroupEnable")]
+        //[Verify(MethodToProperty)]
+        bool IsBroadcastGroupEnable { get; }
+
+        // +(void)setSubGroupLaunchFlag:(BOOL)flag;
+        [Static]
+        [Export("setBroadcastGroupEnable:")]
+        void SetBroadcastGroupEnable(bool flag);
+
         // +(NSArray *)getListOfViewControllers;
         [Static]
         [Export("getListOfViewControllers")]
@@ -1216,6 +1228,7 @@ namespace ApplozicXamarinWrapper
         [Export("getMsgContainerVC")]
         //[Verify(MethodToProperty)]
         string MsgContainerVC { get; }
+
     }
 
     // @interface ALChannel : ALJson
@@ -2164,16 +2177,17 @@ namespace ApplozicXamarinWrapper
         NSObject WeakMessageServiceDelegate { get; set; }
 
         // -(void)sendTextMessage:(NSString *)text andtoContact:(NSString *)toContactId withCompletion:(void (^)(NSString *, NSError *))completion;
-        [Export("sendTextMessage:andtoContact:withCompletion:")]
-        void SendTextMessage(string text, string toContactId, Action<NSString, NSError> completion);
+        [Export("sendTextMessage:text:andtoContact")]
+        void SendTextMessage(string text, string toContactId);
+		
+        //-(void) sendMessageTextWithCompletion:(NSString*)text andtoContact:(NSString*)toContactId withCompletion:(void(^)(NSString * message, NSError * error)) completion 
+		[Export("sendMessageTextWithCompletion:andtoContact:withCompletion:")]
+        void sendMessageTextWithCompletion(string text, string toReceiverId, Action<NSString, NSError> completion  );
 
-        [Export("sendTextMessage:text:andtoContact:orGroupId")]
-        void SendTextMessage1(string text, string toContactId, NSNumber channelKey);
+        [Export("sendTextMessage:andtoContact:orGroupId:")]
+        void SendTextMessageWithGroupOption(string messageText, [NullAllowed] string toContactId, [NullAllowed] NSNumber channelKey);
 
-        // -(void)sendMessage:(ALMessage *)almessage withCompletion:(void (^)(NSString *, NSError *))completion;
-        [Export("sendMessage:withCompletion:")]
-        void SendMessage(ALMessage almessage, Action<NSString, NSError> completion);
-
+      
         // -(void)sendMessageWithAttachment:(ALMessage *)alMessage withAttachmentAtLocation:(NSString *)attachmentLocalPath andWithStatusDelegate:(id)statusDelegate andContentType:(short)contentype;
         [Export("sendMessage:withAttachmentAtLocation:andWithStatusDelegate:andContentType:")]
         void SendMessageWithAttachment(ALMessage alMessage, string attachmentLocalPath, NSObject statusDelegate, short contentype);

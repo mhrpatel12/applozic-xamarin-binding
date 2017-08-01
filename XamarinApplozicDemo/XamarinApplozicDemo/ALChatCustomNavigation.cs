@@ -79,8 +79,14 @@ namespace XamarinApplozicDemo
                 
                 controllerReference.PresentViewController(ctrl, true, () => { });
 
+				ALMessageServiceWrapper messaageService = new ALMessageServiceWrapper();
+				messaageService.sendMessageTextWithCompletion("Msg Text", chatControllers.ContactIds, (NSString response, NSError error) =>
+				{
+								 Console.WriteLine("response :" + response);
 
-            };
+				});
+
+			};
 
             UITapGestureRecognizer tapGesture = new UITapGestureRecognizer(action);
             tapGesture.NumberOfTapsRequired = 1;
