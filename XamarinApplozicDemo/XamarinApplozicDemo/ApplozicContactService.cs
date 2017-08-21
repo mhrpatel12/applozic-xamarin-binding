@@ -39,10 +39,10 @@ namespace XamarinApplozicDemo
 	    }
 
 	  /**
-       * This is sample method you can use to build your contacts group and show same on contact list. 
+       * method you can use to build your contacts group and show same on contact list. 
        * It might be based on company, event etc. 
       */
-		public void AddToPublicContactGroupList(NSMutableArray memberArray, String contactGroupId)
+		public void AddToMembersToContactGroupList(NSMutableArray memberArray, String contactGroupId)
 		{
 
 			short type = 9;//For public contact group
@@ -57,12 +57,14 @@ namespace XamarinApplozicDemo
 
 
 		/**
-		  * This is sample method you can use to build your contacts group and show same on contact list. 
-		  * It might be based on company, event etc. 
+		  * Wrapper to add loginuser to a specific contact group
+		  * 
 		*/
 		public void AddLoginUserToContactGroup(String ContactGroupId)
 		{
-			AddLoginUserToContactGroup(ContactGroupId, ALUserDefaultsHandler.UserId);
+            NSMutableArray memberArray = new NSMutableArray();
+			memberArray.Add(new NSString(ALUserDefaultsHandler.UserId));
+			AddToMembersToContactGroupList(memberArray,ContactGroupId);
 		
         }
 

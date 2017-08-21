@@ -224,10 +224,10 @@ namespace XamarinApplozicDemo
             ALApplozicSettings.EnableOrDisableContactsGroup(false); //Should be marked ad true only if you want to show contacts 
                                                                     //from your specific contact groups based on event, company etc
 
-			NSNumber type = 1;
+			/*NSNumber type = 1;
 			NSMutableArray typeToFilter = new NSMutableArray();
 			typeToFilter.Add(type);
-			ALApplozicSettings.SetContactTypeToFilter(typeToFilter);
+			ALApplozicSettings.SetContactTypeToFilter(typeToFilter);*/
 
 			ALApplozicSettings.SetSubGroupLaunchFlag(false);                             /*  IF NEEDED ONLINE USERS WITH LIMIT   */
 

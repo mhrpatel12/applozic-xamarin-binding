@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 
 using UIKit;
 using ApplozicXamarinWrapper;
@@ -8,6 +8,8 @@ namespace XamarinApplozicDemo
 {
 	public partial class LoginViewController : UIViewController
 	{
+        public static String CONTACT_GROUP_ID="XAMARIN-100";
+
 		partial void LoginButton_TouchUpInside(UIButton sender)
 		{
 			//Registration code here. Build your user details.
@@ -30,8 +32,12 @@ namespace XamarinApplozicDemo
 					{
 						ALChatManager.registerNotification();
 					}
-				
-					UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+
+                    //Enable this code to Add your 
+                    ApplozicContactService ContactService = new ApplozicContactService();
+                    ContactService.AddLoginUserToContactGroup(CONTACT_GROUP_ID);
+
+                    UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
 					MainViewController MainViewController = Storyboard.InstantiateViewController("MainViewController") as MainViewController;
 					this.PresentViewController(MainViewController, true, () => { });
 				}
