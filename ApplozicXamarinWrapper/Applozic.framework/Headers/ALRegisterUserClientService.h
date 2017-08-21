@@ -12,7 +12,6 @@
 #import "ALConstant.h"
 #import "ALAPIResponse.h"
 
-
 @interface ALRegisterUserClientService : NSObject
 
 -(void) initWithCompletion:(ALUser *)user withCompletion:(void(^)(ALRegistrationResponse * message, NSError * error)) completion;

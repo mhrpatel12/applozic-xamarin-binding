@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ALReachability.h"
+#import "ALMessageService.h"
 #import "ALChatLauncher.h"
 
 @interface ALAppLocalNotifications : NSObject
@@ -18,9 +19,10 @@
 
 -(void)reachabilityChanged:(NSNotification*)note;
 
-
+@property(strong) ALReachability * googleReach;
+@property(strong) ALReachability * localWiFiReach;
+@property(strong) ALReachability * internetConnectionReach;
 @property(nonatomic,strong) ALChatLauncher * chatLauncher;
-
 @property (nonatomic) BOOL flag;
 @property(strong,nonatomic) NSDictionary *dict ;
 @property(strong,nonatomic) NSString * contactId;

@@ -18,8 +18,8 @@
 @end
 
 @interface ALChatLauncher : NSObject
-@property (nonatomic, strong) id <ALChatLauncherDelegate> chatLauncherDelegate;
 
+@property (nonatomic, strong) id <ALChatLauncherDelegate> chatLauncherDelegate;
 @property (nonatomic, assign) NSString * applicationId;
 @property (nonatomic, strong) NSNumber * chatLauncherFLAG;
 

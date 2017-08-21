@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ALJson.h"
 #import "ALTopicDetail.h"
+#import "DB_ConversationProxy.h"
 
 @interface ALConversationProxy : ALJson
 

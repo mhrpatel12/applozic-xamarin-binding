@@ -23,7 +23,7 @@ namespace XamarinApplozicDemo
 
 			if (ALUserDefaultsHandler.IsLoggedIn)
 			{
-				//TODO Navigation : launch chat from custom navigation 
+               // ALApplozicSettings.SetContactsGroupId(LoginViewController.Conatct_Group_ID);
                 ChatLauncher.LaunchChatListWithCustomNavigationBar(fromViewController);
 
 			}
@@ -219,13 +219,19 @@ namespace XamarinApplozicDemo
 
 			/*********************************************** CONTACT SETTINGS  **********************************************/
 
-			ALApplozicSettings.SetFilterContactsStatus(false);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
+			ALApplozicSettings.SetFilterContactsStatus(true);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
 			ALApplozicSettings.SetOnlineContactLimit(0);                               /*  IF NEEDED ONLINE USERS WITH LIMIT   */
+            ALApplozicSettings.EnableOrDisableContactsGroup(false); //Should be marked ad true only if you want to show contacts 
+                                                                    //from your specific contact groups based on event, company etc
+
+			NSNumber type = 1;
+			NSMutableArray typeToFilter = new NSMutableArray();
+			typeToFilter.Add(type);
+			ALApplozicSettings.SetContactTypeToFilter(typeToFilter);
 
 			ALApplozicSettings.SetSubGroupLaunchFlag(false);                             /*  IF NEEDED ONLINE USERS WITH LIMIT   */
-																						 /****************************************************************************************************************/
 
-
+           
 			/***************************************** TOAST + CALL OPTION SETTINGS  ****************************************/
 
 			ALApplozicSettings.SetColorForToastText(UIColor.Black);         /*  SET COLOR FOR TOAST TEXT    */
@@ -253,11 +259,6 @@ namespace XamarinApplozicDemo
 
 			/*********************************************GOOLE API SETTINGS*******************************************************************/
 			ALUserDefaultsHandler.SetGoogleMapAPIKey("AIzaSyBnWMTGs1uTFuf8fqQtsmLk-vsWM7OrIXk"); //REPLACE WITH YOUR GOOGLE MAPKEY
-
-            NSNumber type = 1;
-            NSMutableArray typeToFilter = new NSMutableArray();
-            typeToFilter.Add(type);
-            ALApplozicSettings.SetContactTypeToFilter(typeToFilter) ;
 
 			ALApplozicSettings.SetNavigationControllerClassName(new ALChatCustomNavigation().Class.Name);
             Console.WriteLine("SetNavigationControllerClassName :: " + ALApplozicSettings.CustomNavigationControllerClassName);

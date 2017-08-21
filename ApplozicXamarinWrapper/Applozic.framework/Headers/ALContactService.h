@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ALContact.h"
+#import "DB_CONTACT.h"
 
 
 
 @interface ALContactService : NSObject
+
 
 
 -(BOOL)purgeListOfContacts:(NSArray *)contacts;
@@ -31,6 +33,8 @@
 - (ALContact *)loadContactByKey:(NSString *) key value:(NSString*) value;
 
 - (ALContact *)loadOrAddContactByKeyWithDisplayName:(NSString *) contactId value:(NSString*) displayName;
+
+- (void) insertInitialContacts;
 
 -(BOOL)setUnreadCountInDB:(ALContact*)contact;
 

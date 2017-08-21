@@ -1,5 +1,6 @@
 ﻿using System;
 using ApplozicXamarinWrapper;
+using Foundation;
 
 namespace XamarinApplozicDemo
 {
@@ -37,9 +38,34 @@ namespace XamarinApplozicDemo
 
 	    }
 
+	  /**
+       * This is sample method you can use to build your contacts group and show same on contact list. 
+       * It might be based on company, event etc. 
+      */
+		public void AddToPublicContactGroupList(NSMutableArray memberArray, String contactGroupId)
+		{
+
+			short type = 9;//For public contact group
+			ALChannelService.AddMemberToContactGroupOfType(contactGroupId, memberArray, type,
+														   (ALAPIResponse response, NSError error) =>
+														   {
+															   Console.WriteLine("Working Add member to group");
+
+														   });
+		
+        }
+
+
+		/**
+		  * This is sample method you can use to build your contacts group and show same on contact list. 
+		  * It might be based on company, event etc. 
+		*/
+		public void AddLoginUserToContactGroup(String ContactGroupId)
+		{
+			AddLoginUserToContactGroup(ContactGroupId, ALUserDefaultsHandler.UserId);
+		
+        }
+
     }
-
-   
-
 
 }

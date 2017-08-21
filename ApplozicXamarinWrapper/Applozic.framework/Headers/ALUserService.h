@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ALConstant.h"
+#import "ALSyncMessageFeed.h"
+#import "ALMessageList.h"
 #import "ALMessage.h"
-#import "ALContact.h"
-#import "ALUserDetail.h"
+#import "DB_FileMetaInfo.h"
+#import "ALLastSeenSyncFeed.h"
+#import "ALUserClientService.h"
+#import "ALAPIResponse.h"
+#import "ALUserBlockResponse.h"
 
 @interface ALUserService : NSObject
 
@@ -32,6 +37,8 @@
 
 -(void)unblockUser:(NSString *)userId withCompletionHandler:(void(^)(NSError *error, BOOL userUnblock))completion;
 
+-(void)updateBlockUserStatusToLocalDB:(ALUserBlockResponse *)userblock;
+
 -(NSMutableArray *)getListOfBlockedUserByCurrentUser;
 
 +(void)setUnreadCountZeroForContactId:(NSString*)contactId;
@@ -51,5 +58,8 @@
 
 -(void) fetchAndupdateUserDetails:(NSMutableArray *)userArray withCompletion:(void (^)(NSMutableArray * array, NSError *error))completion;
 
+-(void)getUserDetail:(NSString*)userId withCompletion:(void(^)(ALContact *contact))completion;
+
+-(void)updateUserApplicationInfo;
 
 @end

@@ -1,27 +1,13 @@
 ﻿<Properties StartupConfiguration="{A279E1E6-C168-4A05-9A1A-9875B0176D15}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinApplozicDemo/ApplozicContactService.cs">
     <Files>
-      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="65" Column="1" />
-      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="83" Column="50" />
-      <File FileName="XamarinApplozicDemo/ApplozicContactService.cs" Line="17" Column="1" />
-      <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="222" Column="52" />
-      <File FileName="XamarinApplozicDemo/Main.cs" Line="13" Column="2" />
-      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/obj/Debug/ios/ObjCRuntime/Trampolines.g.cs" Line="354" Column="24" />
-      <File FileName="XamarinApplozicDemo/AppDelegate.cs" Line="144" Column="15" />
-      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs" Line="514" Column="58" />
+      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="8" Column="2" />
+      <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="10" Column="37" />
+      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs" Line="1242" Column="19" />
+      <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="220" Column="60" />
+      <File FileName="XamarinApplozicDemo/MainViewController.cs" Line="1" Column="1" />
+      <File FileName="XamarinApplozicDemo/ApplozicContactService.cs" Line="7" Column="6" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="XamarinApplozicDemo" expanded="True">
-            <Node name="ApplozicXamarinWrapper" expanded="True">
-              <Node name="ApiDefinition.cs" selected="True" />
-            </Node>
-            <Node name="XamarinApplozicDemo" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

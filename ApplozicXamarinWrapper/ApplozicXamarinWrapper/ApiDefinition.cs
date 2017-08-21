@@ -70,6 +70,10 @@ namespace ApplozicXamarinWrapper
         // @property (nonatomic, strong) id response;
         [Export("response", ArgumentSemantic.Strong)]
         NSObject Response { get; set; }
+
+		[Export("parseMessage:")]
+		void ParseMessage(NSObject detailJson);
+
     }
 
     // @interface ALTopicDetail : ALJson
@@ -723,6 +727,11 @@ namespace ApplozicXamarinWrapper
         //[Verify(MethodToProperty)]
         bool FilterContactsStatus { get; }
 
+        //[ALApplozicSettings enableOrDisableContactsGroup:TRUE]; //paste this in inside of 
+        [Static]
+        [Export("enableOrDisableContactsGroup:")]
+        void EnableOrDisableContactsGroup(bool flag);
+
         // +(void)setStartTime:(NSNumber *)startTime;
         [Static]
         [Export("setStartTime:")]
@@ -1194,7 +1203,7 @@ namespace ApplozicXamarinWrapper
         [Export("setSubGroupLaunchFlag:")]
         void SetSubGroupLaunchFlag(bool flag);
 
-       // +(void) setBroadcastGroupEnable:(BOOL) flag;
+        // +(void) setBroadcastGroupEnable:(BOOL) flag;
 
         [Static]
         [Export("isBroadcastGroupEnable")]
@@ -1229,6 +1238,9 @@ namespace ApplozicXamarinWrapper
         //[Verify(MethodToProperty)]
         string MsgContainerVC { get; }
 
+        [Static]
+        [Export("setContactsGroupId:")]
+        void SetContactsGroupId(string contactGroupId);
     }
 
     // @interface ALChannel : ALJson
@@ -1839,6 +1851,7 @@ namespace ApplozicXamarinWrapper
         [Export("getGoogleMapAPIKey")]
         //[Verify(MethodToProperty)]
         string GoogleMapAPIKey { get; }
+
     }
 
     // @interface ALChannelService : NSObject
@@ -1858,6 +1871,7 @@ namespace ApplozicXamarinWrapper
         ALChannel GetChannelByKey(NSNumber channelKey);
 
         // -(NSMutableArray *)getListOfAllUsersInChannel:(NSNumber *)channelKey;
+
         [Export("getListOfAllUsersInChannel:")]
         NSMutableArray GetListOfAllUsersInChannel(NSNumber channelKey);
 
@@ -1881,8 +1895,20 @@ namespace ApplozicXamarinWrapper
         [Export("addMemberToChannel:andChannelKey:orClientChannelKey:withCompletion:")]
         void AddMemberToChannel(string userId, NSNumber channelKey, string clientChannelKey, Action<NSError, ALAPIResponse> completion);
 
-        // -(void)removeMemberFromChannel:(NSString *)userId andChannelKey:(NSNumber *)channelKey orClientChannelKey:(NSString *)clientChannelKey withCompletion:(void (^)(NSError *, ALAPIResponse *))completion;
-        [Export("removeMemberFromChannel:andChannelKey:orClientChannelKey:withCompletion:")]
+
+		// addMemberToContactGroupOfType:contactsGroupId withMembers:memberArray withGroupType:CONTACT_GROUP withCompletion:^(ALAPIResponse *response, NSError *error)
+		[Static]
+        [Export("addMemberToContactGroupOfType:withMembers:withGroupType:withCompletion:")]
+        void AddMemberToContactGroupOfType(string contactsGroupId, NSMutableArray memberArray, short contactType, Action<ALAPIResponse,NSError> completion);
+
+		// removeMemberFromContactGroupOfType:contactsGroupId withMembers:memberArray withGroupType:CONTACT_GROUP withCompletion:^(ALAPIResponse *response, NSError *error)
+		[Static]
+        [Export("removeMemberFromContactGroupOfType:withGroupType:withUserId:withCompletion:")]
+		void RemoveMemberFromContactGroupOfType(string contactsGroupId, NSMutableArray memberArray, short contactType, Action<ALAPIResponse,NSError> completion);
+
+
+		// -(void)removeMemberFromChannel:(NSString *)userId andChannelKey:(NSNumber *)channelKey orClientChannelKey:(NSString *)clientChannelKey withCompletion:(void (^)(NSError *, ALAPIResponse *))completion;
+		[Export("removeMemberFromChannel:andChannelKey:orClientChannelKey:withCompletion:")]
         void RemoveMemberFromChannel(string userId, NSNumber channelKey, string clientChannelKey, Action<NSError, ALAPIResponse> completion);
 
         // -(void)deleteChannel:(NSNumber *)channelKey orClientChannelKey:(NSString *)clientChannelKey withCompletion:(void (^)(NSError *, ALAPIResponse *))completion;
@@ -1960,6 +1986,8 @@ namespace ApplozicXamarinWrapper
         // -(void)removeClientChildKeyList:(NSMutableArray *)clientChildKeyList andParentKey:(NSString *)clientParentKey withCompletion:(void (^)(id, NSError *))completion;
         [Export("removeClientChildKeyList:andParentKey:withCompletion:")]
         void RemoveClientChildKeyList(NSMutableArray clientChildKeyList, string clientParentKey, Action<NSObject, NSError> completion);
+    
+
     }
 
     // @interface ALContact : ALJson

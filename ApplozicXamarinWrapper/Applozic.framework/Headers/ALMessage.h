@@ -110,11 +110,14 @@ typedef enum {
 -(BOOL)isDownloadRequired;
 -(BOOL)isUploadRequire;
 -(BOOL)isHiddenMessage;
+-(BOOL)isVOIPNotificationMessage;
+
 
 -(NSString *)getCreatedAtTimeChat:(BOOL)today;
 -(NSNumber *)getGroupId;
 -(NSString *)getNotificationText;
 -(NSMutableDictionary *)getMetaDataDictionary:(NSString *)string;
+-(NSString *)getVOIPMessageText;
 -(BOOL)isMsgHidden;
 -(BOOL)isPushNotificationMessage;
 -(BOOL)isMessageCategoryHidden;

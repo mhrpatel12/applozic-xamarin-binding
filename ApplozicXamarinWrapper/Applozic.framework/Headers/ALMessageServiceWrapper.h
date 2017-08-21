@@ -26,26 +26,20 @@
 
 @property (strong, nonatomic) id <MessageServiceWrapperDelegate> messageServiceDelegate;
 
+-(void)sendTextMessage:(NSString*)text andtoContact:(NSString*)toContactId;
 
 -(void)sendTextMessage:(NSString*)messageText andtoContact:(NSString*)contactId orGroupId:(NSNumber*)channelKey;
 
--(void)sendTextMessage:(NSString*)text andtoContact:(NSString*)toContactId;
-
--(void) sendMessageTextWithCompletion:(NSString*)text andtoContact:(NSString*)toContactId withCompletion:(void(^)(NSString * message, NSError * error)) completion;
-
 -(void) sendMessage:(ALMessage *)alMessage
-                    withAttachmentAtLocation:(NSString *)attachmentLocalPath
-                    andWithStatusDelegate:(id)statusDelegate
-                    andContentType:(short)contentype;
-
+withAttachmentAtLocation:(NSString *)attachmentLocalPath
+andWithStatusDelegate:(id)statusDelegate
+     andContentType:(short)contentype;
 
 -(void) downloadMessageAttachment:(ALMessage*)alMessage;
-
 
 -(ALMessage *)createMessageEntityOfContentType:(int)contentType
                                       toSendTo:(NSString*)to
                                       withText:(NSString*)text;
-
 
 
 @end
