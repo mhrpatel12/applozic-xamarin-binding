@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{A279E1E6-C168-4A05-9A1A-9875B0176D15}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamarinApplozicDemo/ApplozicContactService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/obj/Debug/ios/ApplozicXamarinWrapper/ALApplozicSettings.g.cs">
     <Files>
-      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="11" Column="46" />
+      <File FileName="XamarinApplozicDemo/LoginViewController.cs" Line="67" Column="4" />
+      <File FileName="XamarinApplozicDemo/AppDelegate.cs" Line="139" Column="52" />
       <File FileName="XamarinApplozicDemo/ALChatCustomNavigation.cs" Line="10" Column="37" />
-      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs" Line="1242" Column="19" />
-      <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="224" Column="50" />
-      <File FileName="XamarinApplozicDemo/ApplozicContactService.cs" Line="54" Column="5" />
+      <File FileName="XamarinApplozicDemo/ALChatManager.cs" Line="269" Column="71" />
+      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/ApiDefinition.cs" Line="1249" Column="32" />
+      <File FileName="../ApplozicXamarinWrapper/ApplozicXamarinWrapper/obj/Debug/ios/ApplozicXamarinWrapper/ALApplozicSettings.g.cs" Line="404" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

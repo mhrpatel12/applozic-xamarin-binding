@@ -23,7 +23,7 @@ namespace XamarinApplozicDemo
 
 			if (ALUserDefaultsHandler.IsLoggedIn)
 			{
-               // ALApplozicSettings.SetContactsGroupId(LoginViewController.Conatct_Group_ID);
+                //ALApplozicSettings.SetContactsGroupId(LoginViewController.CONTACT_GROUP_ID);
                 ChatLauncher.LaunchChatListWithCustomNavigationBar(fromViewController);
 
 			}
@@ -219,9 +219,9 @@ namespace XamarinApplozicDemo
 
 			/*********************************************** CONTACT SETTINGS  **********************************************/
 
-			ALApplozicSettings.SetFilterContactsStatus(true);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
+			ALApplozicSettings.SetFilterContactsStatus(false);                           /*  IF NEEDED ALL REGISTERED CONTACTS   */
 			ALApplozicSettings.SetOnlineContactLimit(0);                               /*  IF NEEDED ONLINE USERS WITH LIMIT   */
-            ALApplozicSettings.EnableOrDisableContactsGroup(false); //Should be marked ad true only if you want to show contacts 
+            ALApplozicSettings.EnableOrDisableContactsGroup(true); //Should be marked as true only if you want to show contacts 
                                                                     //from your specific contact groups based on event, company etc
 
 			/*NSNumber type = 1;
@@ -262,6 +262,15 @@ namespace XamarinApplozicDemo
 
 			ALApplozicSettings.SetNavigationControllerClassName(new ALChatCustomNavigation().Class.Name);
             Console.WriteLine("SetNavigationControllerClassName :: " + ALApplozicSettings.CustomNavigationControllerClassName);
+           
+            //Hide attachment options 
+            //NSMutableArray attachmentOptionToHide = new NSMutableArray();
+            //attachmentOptionToHide.Add(new NSString(":audio"));
+            //attachmentOptionToHide.Add(new NSString(":video"));
+            //attachmentOptionToHide.Add(new NSString(":location"));
+            //attachmentOptionToHide.Add(new NSString(":shareContact"));
+
+            //ALApplozicSettings.SetHideAttachmentsOption(attachmentOptionToHide);
 
 
 		}

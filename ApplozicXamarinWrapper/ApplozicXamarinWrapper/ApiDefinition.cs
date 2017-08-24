@@ -1181,6 +1181,7 @@ namespace ApplozicXamarinWrapper
         //[Verify(MethodToProperty)]
         NSMutableArray ContactTypeToFilter { get; }
 
+
         // +(NSString *)getCustomNavigationControllerClassName;
         [Static]
         [Export("getCustomNavigationControllerClassName")]
@@ -1241,7 +1242,14 @@ namespace ApplozicXamarinWrapper
         [Static]
         [Export("setContactsGroupId:")]
         void SetContactsGroupId(string contactGroupId);
-    }
+
+		// setHideAttachmentsOption::attachmentOptionToHide
+		[Static]
+		[Export("setHideAttachmentsOption:")]
+		void SetHideAttachmentsOption(NSMutableArray optionToHides);
+
+
+	}
 
     // @interface ALChannel : ALJson
     [BaseType(typeof(ALJson))]
