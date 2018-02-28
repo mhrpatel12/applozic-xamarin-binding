@@ -21,6 +21,8 @@
 #import "ALChannelClientService.h"
 #import "ALUserDefaultsHandler.h"
 #import "ALChannelSyncResponse.h"
+#import "AlChannelFeedResponse.h"
+
 
 @interface ALChannelService : NSObject
 
@@ -33,6 +35,9 @@
 -(NSMutableArray *)getListOfAllUsersInChannel:(NSNumber *)channelKey;
 
 -(NSString *)stringFromChannelUserList:(NSNumber *)key;
+
+-(void)getChannelInformationByResponse:(NSNumber *)channelKey orClientChannelKey:(NSString *)clientChannelKey withCompletion:(void (^)(NSError *error,ALChannel *alChannel3,AlChannelFeedResponse *channelResponse)) completion;
+
 
 -(void)createChannel:(NSString *)channelName orClientChannelKey:(NSString *)clientChannelKey
       andMembersList:(NSMutableArray *)memberArray andImageLink:(NSString *)imageLink
@@ -140,5 +145,7 @@
 +(void) removeMemberFromContactGroup:(NSString*) contactsGroupId withUserId :(NSString*) userId  withCompletion:(void(^)(ALAPIResponse * response, NSError * error))completion;
 
 +(void) removeMemberFromContactGroupOfType:(NSString*) contactsGroupId  withGroupType:(short) groupType withUserId :(NSString*) userId  withCompletion:(void(^)(ALAPIResponse * response, NSError * error))completion;
+
++(void)getMembersIdsForContactGroups:(NSArray*)contactGroupIds withCompletion:(void(^)(NSError *error, NSArray *membersArray)) completion;
 
 @end

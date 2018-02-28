@@ -52,14 +52,13 @@
 #define LOGIN_USER_SUBSCRIBED_MQTT @"com.applozic.userdefault.LOGIN_USER_SUBSCRIBED_MQTT"
 #define USER_ENCRYPTION_KEY @"com.applozic.userdefault.USER_ENCRYPTION_KEY"
 #define USER_PRICING_PACKAGE @"com.applozic.userdefault.USER_PRICING_PACKAGE"
-#define DEVICE_APNS_TYPE_ID @"com.applozic.userdefault.DEVICE_APNS_TYPE"
 #define DEVICE_ENCRYPTION_ENABLE @"com.applozic.userdefault.DEVICE_ENCRYPTION_ENABLE"
 #define NOTIFICATION_SOUND_FILE_NAME @"com.applozic.userdefault.NOTIFICATION_SOUND_FILE_NAME"
 #define AL_CONTACT_SERVER_CALL_IS_DONE @"com.applozic.userdefault.AL_CONTACT_SERVER_CALL_IS_DONE"
 #define AL_CONTACT_SCROLLING_DONE @"com.applozic.userdefault.AL_CONTACT_SCROLLING_DONE"
 #define KEY_PREFIX @"com.applozic.userdefault"
 #define GROUP_FILTER_LAST_SYNC_TIME @"com.applozic.GROUP_FILTER_LAST_SYNC_TIME"
-
+#define AL_USER_ROLE_TYPE @"com.applozic.userdefault.AL_USER_ROLE_TYPE"
 
 #import <Foundation/Foundation.h>
 
@@ -215,9 +214,6 @@
 +(NSString *)getLoggedInUserStatus;
 +(void)setLoggedInUserStatus:(NSString *)status;
 
-+(void)setDeviceApnsType:(short)type;
-+(short)getDeviceApnsType;
-
 +(BOOL)isUserLoggedInUserSubscribedMQTT;
 +(void)setLoggedInUserSubscribedMQTT:(BOOL)flag;
 
@@ -245,7 +241,7 @@
 +(void) setLastGroupFilterSyncTime: (NSNumber *) lastSyncTime;
 +(NSNumber *)getLastGroupFilterSyncTIme;
 
-
-+(void)setContactScrollingIsInProgress:(BOOL)flag;
++(void)setUserRoleType:(short)type;
++(short)getUserRoleType;
 
 @end
